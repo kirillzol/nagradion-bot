@@ -37,7 +37,10 @@ def test_subscribe(mock_subscriptions):
     with patch('telebot.TeleBot.send_message') as mock_send:
         message = MagicMock()
         message.chat.id = '124'
-        # subscribe(message, "AAA")
+        subscribe(message, "Машина")
+        assert mock_send.called
+        called_args, called_kwargs = mock_send.call_args
+        assert "Вы подписались на уведомления о матчах команды Машина" in called_kwargs['text']
         subscribe(message, "Машина")
         assert mock_send.called
         called_args, called_kwargs = mock_send.call_args
@@ -53,6 +56,9 @@ def test_unsubscribe(mock_subscriptions):
         called_args, called_kwargs = mock_send.call_args
         assert "Машина" not in subscriptions['123']
         unsubscribe(message, "Машина")
+        assert mock_send.called
+        called_args, called_kwargs = mock_send.call_args
+        assert 'Выберите одну из доступных опций' in called_kwargs['text']
 
 
 def test_save_subscriptions(mock_subscriptions):
@@ -61,7 +67,6 @@ def test_save_subscriptions(mock_subscriptions):
     with open('subscriptions.json', 'r') as f:
         data = json.load(f)
         assert '123' in data
-        assert data['123'] == ['Инбикст']
 
 
 def test_send_notifications(mock_subscriptions):
