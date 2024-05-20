@@ -4,4 +4,3 @@ telebot
 schedule
 asyncio
 requests
-locale
