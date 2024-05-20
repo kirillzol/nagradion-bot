@@ -2,9 +2,5 @@ pytest-cov
 pytest
 telebot
 schedule
-time
 asyncio
-threading
-json
-datetime
 requests
