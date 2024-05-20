@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>src/Match.py - flake8 annotated source</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <h1>
+            <a href="src.Match.report.html">
+               <img src="back.svg" alt="&#x2B05;">
+               src/Match.py source
+            </a>
+         </h1>
+
+         <div id="doc">
+            <div id="l1"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F403
+                     </span>
+                     'from src.Team import *' used; unable to detect undefined names</li>
+               
+               </ul><tt><i>1</i> <span class="kn">from</span> <span class="nn">src.Team</span> <span class="kn">import</span> <span class="o">*</span></tt>
+            </div>
+            <div id="l2"
+               class="code sev- "><tt><i>2</i> &nbsp;</tt>
+            </div>
+            <div id="l3"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E302
+                     </span>
+                     Expected 2 blank lines, found 1</li>
+               
+               </ul><tt><i>3</i> <span class="k">class</span> <span class="nc">Match</span><span class="p">:</span></tt>
+            </div>
+            <div id="l4"
+               class="code sev-1  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-1">
+                        F405
+                     </span>
+                     'Team' may be undefined, or defined from star imports: src.Team (in 2 places)</li>
+               
+               </ul><tt><i>4</i>     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">league</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">team1</span><span class="p">:</span> <span class="n">Team</span><span class="p">,</span> <span class="n">team2</span><span class="p">:</span> <span class="n">Team</span><span class="p">,</span> <span class="n">date</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span></tt>
+            </div>
+            <div id="l5"
+               class="code sev- "><tt><i>5</i>         <span class="bp">self</span><span class="o">.</span><span class="n">league</span> <span class="o">=</span> <span class="n">league</span></tt>
+            </div>
+            <div id="l6"
+               class="code sev- "><tt><i>6</i>         <span class="bp">self</span><span class="o">.</span><span class="n">team1</span> <span class="o">=</span> <span class="n">team1</span></tt>
+            </div>
+            <div id="l7"
+               class="code sev- "><tt><i>7</i>         <span class="bp">self</span><span class="o">.</span><span class="n">team2</span> <span class="o">=</span> <span class="n">team2</span></tt>
+            </div>
+            <div id="l8"
+               class="code sev- "><tt><i>8</i>         <span class="bp">self</span><span class="o">.</span><span class="n">date</span> <span class="o">=</span> <span class="n">date</span></tt>
+            </div>
+            <div id="l9"
+               class="code sev- "><tt><i>9</i> &nbsp;</tt>
+            </div>
+            <div id="l10"
+               class="code sev- "><tt><i>10</i>     <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span></tt>
+            </div>
+            <div id="l11"
+               class="code sev- "><tt><i>11</i>         <span class="k">return</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Match(league=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">league</span><span class="si">}</span><span class="s2">&#39;, &quot;</span></tt>
+            </div>
+            <div id="l12"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        E501
+                     </span>
+                     Line too long (83 > 79 characters)</li>
+               
+               </ul><tt><i>12</i>                 <span class="sa">f</span><span class="s2">&quot;team1=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">team1</span><span class="si">}</span><span class="s2">&#39;, team2=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">team2</span><span class="si">}</span><span class="s2">&#39;, date=&#39;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">date</span><span class="si">}</span><span class="s2">&#39;)&quot;</span><span class="p">)</span></tt>
+            </div>
+            <div id="l13"
+               class="code sev- "><tt><i>13</i> &nbsp;</tt>
+            </div>
+            <div id="l14"
+               class="code sev- "><tt><i>14</i>     <span class="k">def</span> <span class="fm">__eq__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span></tt>
+            </div>
+            <div id="l15"
+               class="code sev-2  le">
+               <ul class="violations">
+               
+                  <li>
+                     <span class="count sev-2">
+                        W292
+                     </span>
+                     No newline at end of file</li>
+               
+               </ul><tt><i>15</i>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">date</span> <span class="o">==</span> <span class="n">other</span></tt>
+            </div>
+            
+         </div>
+      </div>
+   </body>
+</html>
