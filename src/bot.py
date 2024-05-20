@@ -6,11 +6,13 @@ import asyncio
 import threading
 from src.requests_handler import *
 import json
+import os
 
 list_of_teams = Handler(data_1).get_list_of_teams() + Handler(data_2).get_list_of_teams() + Handler(
     data_3).get_list_of_teams()
 
-bot = telebot.TeleBot('6732137744:AAE3kwwmkaCWcrt7Cax73qru1PE_WE7HNYw')
+key = os.environ.get('TOKEN')
+bot = telebot.TeleBot(key)
 
 subscriptions = {}
 

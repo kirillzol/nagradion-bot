@@ -26,6 +26,9 @@ jobs:
         pip install flake8 flake8-html pytest-html
 
     - name: Run tests
+      env:
+        TOKEN: ${{ secrets.BOT_TOKEN }}
+
       run: |
         mkdir -p reports/coverage reports/flake8 reports/junit
         python -m pytest --cov=src tests/ --cov-report term --junitxml=reports/junit/junit.xml --html=reports/junit/index.html
