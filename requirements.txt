@@ -1,0 +1,6 @@
+pytest-cov
+pytest
+telebot
+schedule
+asyncio
+requests
